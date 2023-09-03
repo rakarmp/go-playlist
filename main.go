@@ -27,6 +27,9 @@ func main() {
 	router.PATCH("playlist/:id", controllers.UpdatePlaylist)
 	router.DELETE("/playlist/:id", controllers.DeletePlaylist)
 
+	// Proxy
+	router.SetTrustedProxies(nil)
+
 	// Server
 	router.Run("localhost:8000")
 }
