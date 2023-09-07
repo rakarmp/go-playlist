@@ -50,6 +50,7 @@ func CreatePlaylist(ctx *gin.Context) {
 	playlist := models.Playlist{
 		Song:   input.Song,
 		Artist: input.Artist,
+		Info:   input.Info,
 		URL:    input.URL,
 	}
 	models.DB.Create(&playlist)
